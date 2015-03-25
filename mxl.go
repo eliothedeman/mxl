@@ -72,6 +72,7 @@ type Note struct {
 	Voice    int      `xml:"voice"`
 	Type     string   `xml:"type"`
 	Rest     xml.Name `xml:"rest"`
+	Chord    xml.Name `xml:"chord"`
 }
 
 // Pitch represents the pitch of a note
