@@ -67,16 +67,17 @@ type Time struct {
 
 // Note represents a note in a measure
 type Note struct {
-	Accidental int8     `xml:"alter"`
-	Pitch      Pitch    `xml:"pitch"`
-	Duration   int      `xml:"duration"`
-	Voice      int      `xml:"voice"`
-	Type       string   `xml:"type"`
-	Rest       xml.Name `xml:"rest"`
+	Pitch    Pitch    `xml:"pitch"`
+	Duration int      `xml:"duration"`
+	Voice    int      `xml:"voice"`
+	Type     string   `xml:"type"`
+	Rest     xml.Name `xml:"rest"`
+	Chord    xml.Name `xml:"chord"`
 }
 
 // Pitch represents the pitch of a note
 type Pitch struct {
-	Step   string `xml:"step"`
-	Octave int    `xml:"octave"`
+	Accidental int8   `xml:"alter"`
+	Step       string `xml:"step"`
+	Octave     int    `xml:"octave"`
 }
