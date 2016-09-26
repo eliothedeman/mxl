@@ -73,6 +73,7 @@ type Note struct {
 	Type     string   `xml:"type"`
 	Rest     xml.Name `xml:"rest"`
 	Chord    xml.Name `xml:"chord"`
+	Tie      Tie      `xml:"tie"`
 }
 
 // Pitch represents the pitch of a note
@@ -80,4 +81,9 @@ type Pitch struct {
 	Accidental int8   `xml:"alter"`
 	Step       string `xml:"step"`
 	Octave     int    `xml:"octave"`
+}
+
+// Tie represents whether or not a note is tied.
+type Tie struct {
+	Type string `xml:"type,attr"`
 }
